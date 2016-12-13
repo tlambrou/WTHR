@@ -45,17 +45,40 @@ body {
   top: 0px;
   left: 0px; }
 
+#back-link {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 20pt;
+  font-weight: bolder; }
+
 #temp {
   position: relative;
   font-family: Asenine;
-  font-size: 160pt;
+  font-size: 130pt;
   color: #F5F2F2;
   letter-spacing: 3.87px;
   text-shadow: 2px 8px 16px rgba(0, 0, 0, 0.38);
   top: 30px;
   float: right;
   left: 50%;
-  transform: translate(-35%, 0); }
+  transform: translate(-25%, 0); }
+
+#location-name {
+  z-index: 5;
+  font-family: Avenir;
+  position: absolute;
+  font-size: 20pt;
+  width: 275px;
+  text-align: center;
+  color: #F5F2F2;
+  margin: auto;
+  letter-spacing: 3.87px;
+  text-shadow: 2px 4px 16px #c6c6c6;
+  top: 565px;
+  transform: translate(-5px, 0); }
+
+.hide {
+  opacity: 0.0; }
 
 .data-content {
   float: left;
@@ -90,7 +113,7 @@ body {
 
 #city-input:focus {
   outline: none;
-  cursor: auto;
+  cursor: text;
   transform: scale(1.2);
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px; }
@@ -140,12 +163,6 @@ button:active {
     transform: translate(-533px, 210px) rotate(-1deg); }
   to {
     transform: translate(-533px, 210px) rotate(1deg); } }
-img svg g#Sun {
-  animation-name: rotate;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; }
-
 #sun {
   position: absolute;
   transform: translate(-533px, 210px);
@@ -162,7 +179,7 @@ img svg g#Sun {
   position: absolute;
   z-index: 3;
   width: 245px;
-  left: 65px;
+  left: 66px;
   right: 65px;
   bottom: 12px;
   animation-name: levitate;

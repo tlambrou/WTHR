@@ -2,6 +2,9 @@
 // Get today's time and date
 var dateToday = new Date();
 
+var output = dateToday.getMinutes();
+
+console.log(output);
 
 // A helper function
 function getId(id) {
@@ -27,6 +30,9 @@ var locationName = getId("location-name");
 
 var sun = getId("sun");
 var avatar = getId("avatar");
+
+var back = getId("back");
+var backLink = getId("back-link");
 
 // //Set the backgroundPositionY to the time of day
 // var timeY = -100;
@@ -93,7 +99,7 @@ function loadData(city) {
     weatherMain.innerHTML = data.weather[0].main;
     desc.innerHTML = data.weather[0].description;
     // * Use the icon name to load an image for the weather.
-    icon.innerHTML = "<img src='weather-icons/"+data.weather[0].icon+".svg'>";
+    // icon.innerHTML = "<img src='weather-icons/"+data.weather[0].icon+".svg'>";
     // For more info on icons and condition codes: https://openweathermap.org/weather-conditions
 
     // * Convert the temp from Kelvin to F or C.
@@ -119,8 +125,39 @@ function loadData(city) {
     sunset.innerHTML = getTimeFrom(new Date(data.sys.sunset * 1000));
     locationName.innerHTML = data.name;
 
+var beginSunrise = (data.sys.sunrise * 1000) - 3600000;
+var beginDaytime = (data.sys.sunrise * 1000) + 3600000;
+var beginSunset = (data.sys.sunset * 1000) - 3600000;
+var beginNightime = (data.sys.sunset * 1000) + 3600000;
+
+   if (dateToday <= beginSunrise || dateToday > beginNightime) {
+
+     //Change assets for nighttime
+     sun.src="Night.svg";
+
+   } else if (dateToday > beginSunrise && dateToday <= beginDaytime) {
+
+     //Change assets for sunrise
+     sun.src="Sunrise.svg";
+
+   } else if (dateToday > beginDaytime && dateToday <= beginSunset) {
+
+     //Change assets for daytime
+     sun.src="Day.svg";
+
+   } else if (dateToday > beginSunset && dateToday <= beginNightime) {
+
+     //Change assets for sunset
+     sun.src="Sunset.svg";
+
+   }
+
   });
 }
+
+$("#back-link").on('click', function() {
+   container.classList.remove("next");
+});
 
 cityForm.onsubmit = function (event) {
   event.preventDefault();
@@ -165,6 +202,7 @@ function getDayFrom(date) {
   var dayIndex = date.getDay();
 }
 
+// Temperature conversion functions from kelvin
 function kToF(t) {
   // Do some math and round to two decimal places.
   return (t * 9/5 - 459.67).toFixed(2);
