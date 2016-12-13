@@ -5,6 +5,7 @@ Using the OpenWeather.org API to create a modern weather app that is accessible 
 
 ####Initial Sketch Design
 
-![MockUp](draft.jpeg)
+![MockUp](Draft.png)
 
 Visit [MyWTHR.com](http://mywthr.com) for the end result.
+
