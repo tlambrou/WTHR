@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>WTHR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="styles.css" media="screen">
+
+
+</head>
+<body id="body">
+  <!-- Sun Image  -->
+  <div id="container" class="container">
+    <div id="city-form-group" class="city-form-group">
+      <!-- Feel free to edit the markup used here -->
+      <form id="city-form" class="city-form" action="#" method="get">
+        <div class="city-form">
+          <label id="city-input-label" for="city-input">City</label>
+          <input id="city-input" autofocus required autocomplete="off" placeholder="Enter a City or Zip Code">
+        </div>
+        <div class="city-form">
+          <button id="submit-button" type="submit">Submit</button>
+        </div>
+      </form>
+
+      <div>
+        <button id="save-city-button">Save City</button>
+      </div>
+    </div>
+    <!-- A form allows us ot input the name of a city. Submiting the form weather for that city. -->
+    <div id="app" class="app">
+
+      <div class="data-content">
+        <div id="temp"></div>
+        <div>Min:<div id="temp_min"></div></div>
+        <div>Max:<div id="temp_max"></div></div>
+        <div>Date:<div id="dt"></div></div>
+        <div id="icon" ></div>
+        <div>Location:<div id="location-name"></div></div>
+        <div>Coords:<div id="coords"></div></div>
+        <div>Weather:<div id="weather-main"></div></div>
+        <div>Description:<div id="desc"></div></div>
+        <div>Clouds:<div id="clouds"></div></div>
+        <div>Wind Speed:<div id="speed"></div></div>
+        <div>Pressure:<div id="pressure"></div></div>
+        <div>Humidity:<div id="humidity"></div></div>
+        <div>Degree:<div id="deg"></div></div>
+        <div>Sunrise:<div id="sunrise"></div></div>
+        <div>Sunset:<div id="sunset"></div></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="screen">
+
+    <!-- City Avatar -->
+    <div class="avatar"> <img id="avatar" "clearfix" src="island.png" width="50%"/>
+
+      <!-- Sun -->
+      <img id="sun" class="clearfix" src="day.svg" />
+
+    </div>
+
+  </div>
+
+</body>
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="main.js"></script>
+
+</html>

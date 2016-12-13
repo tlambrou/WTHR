@@ -1,0 +1,193 @@
+@font-face {
+  font-family: Asenine;
+  src: url(ASENINE_.ttf); }
+body, html {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0; }
+
+body {
+  color: #FFF;
+  /* Rectangle: */
+  /* Gradient: */
+  background-color: #69D2E7;
+  /* background-image: radial-gradient(208px 124px, $day1 43%, $day2 60%, $day3 70%, $day4 77%, $day5 85%, $day6 100%); */
+  background-repeat: no-repeat;
+  background-position: 0px 100px;
+  overflow: hidden; }
+
+.container {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 400ms;
+  z-index: 5; }
+
+.container.next {
+  left: -100%; }
+
+.city-form-group {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  top: 0px;
+  float: left;
+  left: 0px; }
+
+.app {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  float: left;
+  top: 0px;
+  left: 0px; }
+
+#temp {
+  position: relative;
+  font-family: Asenine;
+  font-size: 160pt;
+  color: #F5F2F2;
+  letter-spacing: 3.87px;
+  text-shadow: 2px 8px 16px rgba(0, 0, 0, 0.38);
+  top: 30px;
+  float: right;
+  left: 50%;
+  transform: translate(-35%, 0); }
+
+.data-content {
+  float: left;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0%); }
+
+.city-form {
+  height: 667px;
+  width: 375px;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, 0%); }
+
+#city-input-label {
+  display: none; }
+
+#city-input {
+  color: #636D7B;
+  position: absolute;
+  font-size: 11pt;
+  background: rgba(232, 255, 249, 0.67);
+  border: 2px solid #636D7B;
+  box-sizing: border-box;
+  margin: 1em 64px;
+  top: 60px;
+  width: 246px;
+  padding: 8px 8px 8px 44px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px; }
+
+#city-input:focus {
+  outline: none;
+  cursor: auto;
+  transform: scale(1.2);
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px; }
+
+#submit-button {
+  position: relative;
+  top: 120px;
+  float: left;
+  left: 187px;
+  transform: translate(-75%, 0); }
+
+#save-city-button {
+  position: relative;
+  font-size: 9pt;
+  top: 170px;
+  left: 50%;
+  transform: translate(-75%, 0); }
+
+button {
+  color: #D6FEFF;
+  font-size: 11pt;
+  background: rgba(53, 92, 124, 0.67);
+  border: 0px solid #D6FEFF;
+  box-sizing: border-box;
+  margin: 1em 20px;
+  width: 10  0px;
+  padding: 2px 8px;
+  border-radius: 6px; }
+
+button, select:focus {
+  outline: none; }
+
+button:active {
+  transform: scale(1.2); }
+
+#screen {
+  height: 667px;
+  width: 375px;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, 0%); }
+
+/* Standard syntax */
+@keyframes rotate {
+  from {
+    transform: translate(-533px, 210px) rotate(-1deg); }
+  to {
+    transform: translate(-533px, 210px) rotate(1deg); } }
+img svg g#Sun {
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; }
+
+#sun {
+  position: absolute;
+  transform: translate(-533px, 210px);
+  transition: 1400ms;
+  bottom: 12px;
+  z-index: -1; }
+
+@keyframes levitate {
+  from {
+    transform: translate(0, 0px); }
+  to {
+    transform: translate(0, -10px); } }
+#avatar {
+  position: absolute;
+  z-index: 3;
+  width: 245px;
+  left: 65px;
+  right: 65px;
+  bottom: 12px;
+  animation-name: levitate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+/* start commented backslash hack \*/
+* html .clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+/* close commented backslash hack */
+
+/*# sourceMappingURL=styles.css.map */
