@@ -44,6 +44,9 @@ var backLink = getId("back-link");
 //
 // $("body").css({"background-position-y":"-100px"})
 
+
+
+
 var container = getId("container");
 
 var cityForm = getId("city-form");
@@ -134,26 +137,40 @@ var beginNightime = (data.sys.sunset * 1000) + 3600000;
 
      //Change assets for nighttime
      sun.src="Night.svg";
+    $("body").css("background-color", "#5D4157");
 
    } else if (dateToday > beginSunrise && dateToday <= beginDaytime) {
 
      //Change assets for sunrise
      sun.src="Sunrise.svg";
+     $("body").css("background-color", "#00659D");
+
 
    } else if (dateToday > beginDaytime && dateToday <= beginSunset) {
 
      //Change assets for daytime
      sun.src="Day.svg";
+     $("body").css("background-color", "#69D2E7");
+
 
    } else if (dateToday > beginSunset && dateToday <= beginNightime) {
 
      //Change assets for sunset
      sun.src="Sunset.svg";
+     $("body").css("background-color", "#0E5560");
+
 
    }
 
   });
 }
+
+//Calculate the height based on Sunrise and Sunset
+
+// var timeY = -100;
+// $("sun").css({
+//   backgroundPositionY:timeY+"px"
+// });
 
 $("#back-link").on('click', function() {
    container.classList.remove("next");
