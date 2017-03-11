@@ -7,5 +7,5 @@ Using the OpenWeather.org API to create a modern weather app that is accessible 
 
 ![MockUp](Draft.png)
 
-Visit [https://tlambrou.github.io/WTHR/](https://tlambrou.github.io/WTHR/) for the end result.
+Visit [http://thewthr.com](http://thewthr.com) for the end result.
 
